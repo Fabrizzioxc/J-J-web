@@ -156,34 +156,67 @@ export default function InvegarWebsite() {
 </section>
 
 {/* Servicios */}
-<section className="bg-[#f7f5ef] py-20">
-  <div className="container mx-auto px-4">
-    <h2 className="text-4xl font-bold text-center mb-12">SERVICIOS</h2>
-    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {[1, 2, 3, 4].map((card) => (
-        <div key={card} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-          <div className="h-40 bg-gray-300" />
-          <div className="p-6">
-            <h3 className="text-lg font-semibold mb-2">Lorem Ipsum</h3>
-            <p className="text-sm text-gray-600 mb-4">
-              There are many variations of passages of Lorem Ipsum available...
-            </p>
-            <Link href="#" className="text-sm font-medium text-blue-600 hover:underline inline-flex items-center">
-              Lorem Ipsum <span className="ml-1">→</span>
-            </Link>
-          </div>
-        </div>
-      ))}
-    </div>
 
-    {/* Indicadores tipo carrusel */}
-    <div className="flex justify-center mt-8 space-x-2">
-      <span className="h-3 w-3 bg-black rounded-full" />
-      <span className="h-3 w-3 bg-black/30 rounded-full" />
-      <span className="h-3 w-3 bg-black/30 rounded-full" />
+<section className="bg-[#f7f5ef] py-20">
+  <div className="container mx-auto px-6 md:px-8">
+    <h2 className="text-4xl font-bold text-center mb-12">SERVICIOS</h2>
+
+    <div className="flex flex-wrap justify-center gap-8">
+      {/* Pintura */}
+      <div className="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 max-w-sm w-full">
+        <Image
+          src="/nosotros.webp"
+          alt="Servicio de pintura"
+          width={400}
+          height={200}
+          className="w-full h-48 object-cover"
+        />
+        <div className="p-6">
+          <h3 className="text-lg font-semibold mb-3">Pintura Profesional</h3>
+          <p className="text-sm text-gray-600">
+            Transformamos tus espacios con acabados impecables, aplicando pinturas de alta durabilidad y variedad de tonos. Nuestro equipo garantiza precisión, limpieza y asesoría en selección de colores para lograr ambientes únicos y armónicos.
+          </p>
+        </div>
+      </div>
+
+      {/* Drywall */}
+      <div className="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 max-w-sm w-full">
+        <Image
+          src="/nosotros.webp"
+          alt="Servicio de drywall"
+          width={400}
+          height={200}
+          className="w-full h-48 object-cover"
+        />
+        <div className="p-6">
+          <h3 className="text-lg font-semibold mb-3">Instalación de Drywall</h3>
+          <p className="text-sm text-gray-600">
+            Ofrecemos soluciones rápidas y eficientes en construcción ligera con drywall. Ideal para divisiones, cielos rasos y remodelaciones modernas. Nuestros acabados cumplen altos estándares de calidad y resistencia estructural.
+          </p>
+        </div>
+      </div>
+
+      {/* Electricidad */}
+      <div className="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 max-w-sm w-full">
+        <Image
+          src="/nosotros.webp"
+          alt="Servicio de electricidad"
+          width={400}
+          height={200}
+          className="w-full h-48 object-cover"
+        />
+        <div className="p-6">
+          <h3 className="text-lg font-semibold mb-3">Servicios Eléctricos</h3>
+          <p className="text-sm text-gray-600">
+            Realizamos instalaciones eléctricas seguras, mantenimiento preventivo, reparaciones y mejoras. Contamos con personal calificado para garantizar el cumplimiento de normas técnicas y la seguridad de tu hogar o negocio.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+
 
 
       {/* Galería de Proyectos */}
@@ -194,7 +227,7 @@ export default function InvegarWebsite() {
             {[1, 2, 3, 4, 5, 6].map((item) => (
               <div key={item} className="relative group overflow-hidden rounded-lg">
                 <Image
-                  src={`/placeholder.svg?height=300&width=400`}
+                  src={`/nosotros.webp`}
                   alt={`Proyecto ${item}`}
                   width={400}
                   height={300}
@@ -210,22 +243,20 @@ export default function InvegarWebsite() {
       </section>
 
 
-      {/* Formulario de Contacto */}
       <section className="bg-[#f7f5ef] py-20">
   <div className="container mx-auto px-4">
-    {/* Título principal */}
     <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-      Leading Way In Building & Civil Construction
+      Solicita tu Cotización Personalizada
     </h2>
 
     {/* Etiquetas de confianza */}
     <div className="flex flex-wrap justify-center gap-4 mb-12">
-      {["Professional Staff", "100% Satisfaction", "Accurate Testing", "Transparent Pricing"].map((label) => (
+      {["Equipo Profesional", "Garantía de Satisfacción", "Inspección Precisa", "Precios Transparentes"].map((etiqueta) => (
         <span
-          key={label}
+          key={etiqueta}
           className="bg-black text-white text-sm px-4 py-2 rounded-full font-medium"
         >
-          {label}
+          {etiqueta}
         </span>
       ))}
     </div>
@@ -234,48 +265,55 @@ export default function InvegarWebsite() {
     <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
       {/* Formulario */}
       <div className="bg-[#3f6ea5] p-8 rounded-xl shadow-lg text-white">
-        <h3 className="text-xl font-semibold mb-2">Request A Quote</h3>
+        <h3 className="text-xl font-semibold mb-2">Cotiza tu Proyecto</h3>
         <p className="text-sm mb-6">
-          Complete control over products allow us to offer the best quality prices and services.
+          Completa el formulario y nuestro equipo te contactará con una propuesta adecuada a tus necesidades.
         </p>
         <form className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Input placeholder="Name" className="bg-white text-black" />
-            <Input placeholder="Email" type="email" className="bg-white text-black" />
+            <input placeholder="Nombre completo" className="bg-white text-black px-4 py-2 rounded-md" />
+            <input placeholder="Correo electrónico" type="email" className="bg-white text-black px-4 py-2 rounded-md" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Input placeholder="Phone" className="bg-white text-black" />
-            <select className="bg-white text-black px-4 py-2 rounded-md border border-gray-300">
-              <option>Select Your Service</option>
-              <option>Drywall</option>
+            <input placeholder="Teléfono" className="bg-white text-black px-4 py-2 rounded-md" />
+            <select className="bg-white text-black px-4 py-2 rounded-md">
+              <option>Selecciona un servicio</option>
+              <option>Instalación de drywall</option>
               <option>Pintura</option>
               <option>Electricidad</option>
+              <option>Reparaciones generales</option>
+              <option>Cielo rasos</option>
             </select>
           </div>
-          <Textarea placeholder="Additional Details" rows={4} className="bg-white text-black" />
-          <Button className="w-full bg-black text-white hover:bg-gray-800">Submit Request</Button>
+          <textarea placeholder="Detalles adicionales del proyecto..." rows={4} className="bg-white text-black px-4 py-2 rounded-md" />
+          <button type="submit" className="w-full bg-black text-white py-3 rounded-md hover:bg-gray-800">
+            Enviar solicitud
+          </button>
         </form>
       </div>
 
-      {/* Contact Info */}
+      {/* Contacto */}
       <div className="bg-[#3f6ea5] p-8 rounded-xl shadow-lg text-white space-y-6">
-        <h3 className="text-xl font-semibold">Contact Info</h3>
+        <h3 className="text-xl font-semibold">Información de Contacto</h3>
         <div className="text-sm space-y-2">
-          <p className="font-medium">Our Location</p>
-          <p>18 Office Park, Building 20th Floor Unit A, Jakarta</p>
+          <p className="font-medium">Dirección</p>
+          <p>Av. Principal 123, Lima, Perú</p>
 
-          <p className="font-medium mt-4">Quick Contact</p>
-          <p>Email: contact@jhontarkotr.co</p>
-          <p>Call: (+62) 877-2469-7946</p>
+          <p className="font-medium mt-4">Contacto directo</p>
+          <p>Correo: contacto@jyjsoluciones.pe</p>
+          <p>Teléfono: (+51) 999 123 456</p>
 
-          <p className="font-medium mt-4">Opening Hours</p>
-          <p>Monday – Friday<br />08:00 AM – 05:00 PM</p>
+          <p className="font-medium mt-4">Horario de atención</p>
+          <p>Lunes a Viernes<br />08:00 AM – 06:00 PM</p>
         </div>
-        <Button variant="secondary" className="w-full bg-black text-white hover:bg-gray-800">Contact Us</Button>
+        <button className="w-full bg-black text-white py-3 rounded-md hover:bg-gray-800">
+          Contáctanos
+        </button>
       </div>
     </div>
   </div>
 </section>
+
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
