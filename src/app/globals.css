@@ -118,5 +118,30 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+    min-width: 320px;
   }
+  html {
+    scroll-behavior: smooth;
+    min-width: 320px;
+    overflow-x: hidden;
+  }
+  .hero-bg {
+    position: relative;
+    background-color: #F9F6EE;
+    z-index: 0;
+  }
+  
+  .hero-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('/texturabg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+    z-index: -1;
+  }
+  
 }
